@@ -1,6 +1,6 @@
-import { Easy_Problems } from "./Arrays and String/Easy/Easy_Problems";
-import { Medium_Problems } from "./Arrays and String/Medium/Medium_Problems";
-import { Hash_And_HashSet } from "./Hash and HashSet/Easy/Easy_Problems";
+import { Easy_Problems } from "./Aglorithm/Arrays and String/Easy/Easy_Problems";
+import { Medium_Problems } from "./Aglorithm/Arrays and String/Medium/Medium_Problems";
+import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problems";
 // let response:Easy_Problems.B7.Summary_Ranges = new Easy_Problems.B7.Summary_Ranges([1,3,2,10,9,11,2,1]) 
 // console.log(response.summary_ranges());
 
@@ -15,5 +15,11 @@ import { Hash_And_HashSet } from "./Hash and HashSet/Easy/Easy_Problems";
 
 
 //Testing out Alogrithm => Hash and hasSet / Easy / Jewels and stones
-let response: Hash_And_HashSet.Easy_Problems.Jewels_And_Stones = new Hash_And_HashSet.Easy_Problems.Jewels_And_Stones('aA', 'aAAabbbbb');
-console.log(response.jewels_and_stones())
+// let response: Hash_And_HashSet.Easy_Problems.Jewels_And_Stones = new Hash_And_HashSet.Easy_Problems.Jewels_And_Stones('aA', 'aAAabbbbb');
+// console.log(response.jewels_and_stone_hash_set());
+
+
+//Testing out Algrithm => Hash and HasSet / Easy / Contains Dublicate
+
+let response: Hash_And_HashSet.Easy_Problems.Contains_Dublicate = new Hash_And_HashSet.Easy_Problems.Contains_Dublicate([1,2,2,3,4,5,6])
+console.log(response.contains_dublicate_has_set())
