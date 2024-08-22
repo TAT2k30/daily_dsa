@@ -30,11 +30,24 @@ export namespace Medium_Problems {
     }
 
     merge_intervals = () => {
-
+      let answer = this.sort_array_of_array_numbers();
+      
     };
 
+
+
+    //Sort để dễ tính toán
     sort_array_of_array_numbers = () => {
-      
-    }
+      for (let i: number = 0; i < this.input.length; i++) {
+        for (let j: number = i + 1; j < this.input.length; j++) {
+          if (this.input[i][0] > this.input[j][0]) {
+            let swapValue = this.input[i];
+            this.input[i] = this.input[j];
+            this.input[j] = swapValue;
+          }
+        }
+      }
+      return this.input;
+    };
   }
 }

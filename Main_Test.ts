@@ -1,8 +1,19 @@
 import { Easy_Problems } from "./Arrays and String/Easy/Easy_Problems";
 import { Medium_Problems } from "./Arrays and String/Medium/Medium_Problems";
-
+import { Hash_And_HashSet } from "./Hash and HashSet/Easy/Easy_Problems";
 // let response:Easy_Problems.B7.Summary_Ranges = new Easy_Problems.B7.Summary_Ranges([1,3,2,10,9,11,2,1]) 
 // console.log(response.summary_ranges());
 
-let response: Medium_Problems.Product_Of_Array_Except_Self = new Medium_Problems.Product_Of_Array_Except_Self([-1,1,0,-3,3]);
-console.log(response.product_of_array_except_self())
+
+//Testing out Alogrithm => Arrays and Strings / Medium / product of array except self.
+// let response: Medium_Problems.Product_Of_Array_Except_Self = new Medium_Problems.Product_Of_Array_Except_Self([-1,1,0,-3,3]);
+// console.log(response.product_of_array_except_self())
+
+//Testing out Alogrithm => Arrays and Strings / Medium / Merge intervals.
+// let response: Medium_Problems.Merge_Intervals = new Medium_Problems.Merge_Intervals([[2,4],[1,2],[9,8],[3,4]])
+// console.log(response.sort_array_of_array_numbers())
+
+
+//Testing out Alogrithm => Hash and hasSet / Easy / Jewels and stones
+let response: Hash_And_HashSet.Easy_Problems.Jewels_And_Stones = new Hash_And_HashSet.Easy_Problems.Jewels_And_Stones('aA', 'aAAabbbbb');
+console.log(response.jewels_and_stones())
