@@ -30,11 +30,18 @@ export namespace Medium_Problems {
     }
 
     merge_intervals = () => {
-      let answer = this.sort_array_of_array_numbers();
-      
+      let sortedIntervals  = this.sort_array_of_array_numbers();
+      let res:number[][] = [];
+
+      for (let i: number = 0; i < this.input.length; i++) {
+       if(res.length === 0 || res[res.length - 1][1] < sortedIntervals[i][0]){
+        res.push(sortedIntervals[i])
+       }else{
+        res[res.length - 1][1] = Math.max(res[res.length - 1][1], sortedIntervals[i][1])
+       }
+      }
+      console.log(res)
     };
-
-
 
     //Sort để dễ tính toán
     sort_array_of_array_numbers = () => {
@@ -50,4 +57,7 @@ export namespace Medium_Problems {
       return this.input;
     };
   }
+
+  let response: Merge_Intervals = new Merge_Intervals([[1,3], [3,6], [6,10], [3,4], [1,2], [12,20]])
+  response.merge_intervals()
 }
