@@ -30,17 +30,23 @@ export namespace Medium_Problems {
     }
 
     merge_intervals = () => {
-      let sortedIntervals  = this.sort_array_of_array_numbers();
-      let res:number[][] = [];
+      let sortedIntervals = this.sort_array_of_array_numbers();
+      let res: number[][] = [];
 
       for (let i: number = 0; i < this.input.length; i++) {
-       if(res.length === 0 || res[res.length - 1][1] < sortedIntervals[i][0]){
-        res.push(sortedIntervals[i])
-       }else{
-        res[res.length - 1][1] = Math.max(res[res.length - 1][1], sortedIntervals[i][1])
-       }
+        if (
+          res.length === 0 ||
+          res[res.length - 1][1] < sortedIntervals[i][0]
+        ) {
+          res.push(sortedIntervals[i]);
+        } else {
+          res[res.length - 1][1] = Math.max(
+            res[res.length - 1][1],
+            sortedIntervals[i][1]
+          );
+        }
       }
-      console.log(res)
+      console.log(res);
     };
 
     //Sort để dễ tính toán
@@ -58,6 +64,31 @@ export namespace Medium_Problems {
     };
   }
 
-  let response: Merge_Intervals = new Merge_Intervals([[1,3], [3,6], [6,10], [3,4], [1,2], [12,20]])
-  response.merge_intervals()
+  export class Rotate_Image {
+    private result: number[][];
+    constructor(input: number[][]) {
+      this.result = input;
+    }
+
+    public rotate_image = () => {
+      let n: number = this.result.length;
+
+      for (let i = 0; i < n; i++) {
+        for (let j: number = 0; j <= i; j++) {
+          if (i != j) {
+            let temp: number = this.result[i][j];
+            this.result[i][j] = this.result[j][i];
+            this.result[j][i] = temp;
+          }
+        }
+      }
+
+      
+
+      return this.result;
+    };
+  }
+
+  let response : Rotate_Image = new Rotate_Image([[1,2,3],[4,5,6],[7,8,9]])
+  console.log(response.rotate_image())
 }

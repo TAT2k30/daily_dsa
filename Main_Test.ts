@@ -1,3 +1,4 @@
+import { Two_Pointers } from "./Aglorithm/2_Pointers/Easy/Easy_Problems";
 import { Easy_Problems } from "./Aglorithm/Arrays and String/Easy/Easy_Problems";
 import { Medium_Problems } from "./Aglorithm/Arrays and String/Medium/Medium_Problems";
 import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problems";
@@ -21,5 +22,10 @@ import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problem
 
 //Testing out Algrithm => Hash and HasSet / Easy / Contains Dublicate
 
-let response: Hash_And_HashSet.Easy_Problems.Contains_Dublicate = new Hash_And_HashSet.Easy_Problems.Contains_Dublicate([1,2,2,3,4,5,6])
-console.log(response.contains_dublicate_has_set())
+// let response: Hash_And_HashSet.Easy_Problems.Contains_Dublicate = new Hash_And_HashSet.Easy_Problems.Contains_Dublicate([1,2,2,3,4,5,6])
+// console.log(response.contains_dublicate_has_set())
+
+
+//Testing out Alogrithm => Two Pointers / Easy / Sqyare of a sorted array
+// let response:Two_Pointers.Square_Of_A_Sorted_Array = new Two_Pointers.Square_Of_A_Sorted_Array([-7,-3,2,3,11]) 
+// console.log(response.square_of_a_sorted_array())
