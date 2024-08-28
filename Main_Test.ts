@@ -29,3 +29,8 @@ import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problem
 //Testing out Alogrithm => Two Pointers / Easy / Sqyare of a sorted array
 // let response:Two_Pointers.Square_Of_A_Sorted_Array = new Two_Pointers.Square_Of_A_Sorted_Array([-7,-3,2,3,11]) 
 // console.log(response.square_of_a_sorted_array())
+
+
+//Testing out Alogrithm => Two Pointer / Easy / Reverse String 
+let response : Two_Pointers.Reverse_String = new Two_Pointers.Reverse_String("anhtien");
+response.reverse_string()
