@@ -2,6 +2,9 @@ import { Two_Pointers } from "./Aglorithm/2_Pointers/Easy/Easy_Problems";
 import { Easy_Problems } from "./Aglorithm/Arrays and String/Easy/Easy_Problems";
 import { Medium_Problems } from "./Aglorithm/Arrays and String/Medium/Medium_Problems";
 import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problems";
+import { Linked_List } from "./Aglorithm/Linked List/Easy/Easy_Problems";
+import { DataStructure } from "./Data Structure/LinkedList";
+import { Models } from "./Models/User";
 // let response:Easy_Problems.B7.Summary_Ranges = new Easy_Problems.B7.Summary_Ranges([1,3,2,10,9,11,2,1]) 
 // console.log(response.summary_ranges());
 
@@ -32,5 +35,44 @@ import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problem
 
 
 //Testing out Alogrithm => Two Pointer / Easy / Reverse String 
-let response : Two_Pointers.Reverse_String = new Two_Pointers.Reverse_String("anhtien");
-response.reverse_string()
+// let response : Two_Pointers.Reverse_String = new Two_Pointers.Reverse_String("anhtien");
+// response.reverse_string()
+
+// Testing Data Structure Linked List
+let user1 = new Models.User({
+    Name: "Tran Anh Tien",
+    Age: 21,
+    Description: "Love playing basketball",
+    Salary: 3000
+});
+let user2 = new Models.User({
+    Name: "Tran Thanh Binh",
+    Age: 21,
+    Description: "Love playing Football",
+    Salary: 3000
+});
+let user3 = new Models.User({
+    Name: "Tran Phuc Nam",
+    Age: 21,
+    Description: "Have a hobby about playing Gundam models",
+    Salary: 3000
+});
+let user4 = new Models.User({
+    Name: "Le Cong Khanh",
+    Age: 21,
+    Description: "rat",
+    Salary: 3000
+});
+
+let node1 = new DataStructure.Node(user1);
+let node2 = new DataStructure.Node(user2);
+let node3 = new DataStructure.Node(user3);
+let node4 = new DataStructure.Node(user4);
+
+let linkedList = new DataStructure.Linked_List<Models.User>();
+linkedList.insertInBegin(user1);
+linkedList.insertAtEnd(user2);
+linkedList.insertAtEnd(user3);
+linkedList.insertAtEnd(user4);
+
+linkedList.printLinkedList();
