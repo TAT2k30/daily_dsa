@@ -1,10 +1,8 @@
 export namespace Models {
-    // Define the HasName interface
     interface HasName { 
         Name: string;
     }
 
-    // Define the User_Type type extending HasName
     export type User_Type = HasName & {
         Age: number;
         Salary: number;
@@ -37,7 +35,6 @@ export namespace Models {
             this.name = name;
         }
 
-        // Getter and Setter for Age
         public getAge(): number {
             return this.age;
         }
@@ -50,7 +47,6 @@ export namespace Models {
             }
         }
 
-        // Getter and Setter for Salary
         public getSalary(): number {
             return this.salary;
         }
@@ -63,7 +59,6 @@ export namespace Models {
             }
         }
 
-        // Getter and Setter for Description
         public getDescription(): string {
             return this.description;
         }
@@ -72,7 +67,6 @@ export namespace Models {
             this.description = description;
         }
 
-        // Increase salary by a given percentage
         public increaseSalary(percent: number): void {
             if (percent > 0) {
                 this.salary += (this.salary * percent) / 100;
@@ -81,7 +75,6 @@ export namespace Models {
             }
         }
 
-        // Get a summary of the user
         public getSummary(): string {
             return `User ${this.name}, Age: ${this.age}, Salary: $${this.salary}, Description: ${this.description}`;
         }

@@ -74,5 +74,9 @@ export namespace DataStructure {
       result += "null";
       console.log(result);
     }
+
+    public getHead = (): Node<T> => {
+      return this.head!;
+    };
   }
 }
