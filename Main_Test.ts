@@ -2,6 +2,7 @@ import { Two_Pointers } from "./Aglorithm/2_Pointers/Easy/Easy_Problems";
 import { Easy_Problems } from "./Aglorithm/Arrays and String/Easy/Easy_Problems";
 import { Medium_Problems } from "./Aglorithm/Arrays and String/Medium/Medium_Problems";
 import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problems";
+import { LeetCode } from "./Aglorithm/Leet_Codes/Medium";
 import { Linked_List } from "./Aglorithm/Linked List/Easy/Easy_Problems";
 import { DataStructure } from "./Data Structure/LinkedList";
 import { Models } from "./Models/User";
@@ -34,49 +35,56 @@ import { Models } from "./Models/User";
 // response.reverse_string()
 
 // Testing Data Structure Linked List
-let user1 = new Models.User({
-  Name: "Tran Anh Tien",
-  Age: 21,
-  Description: "Love playing basketball",
-  Salary: 3000,
-});
-let user2 = new Models.User({
-  Name: "Tran Thanh Binh",
-  Age: 21,
-  Description: "Love playing Football",
-  Salary: 3000,
-});
-let user3 = new Models.User({
-  Name: "Tran Phuc Nam",
-  Age: 21,
-  Description: "Have a hobby about playing Gundam models",
-  Salary: 3000,
-});
-let user4 = new Models.User({
-  Name: "Le Cong Khanh",
-  Age: 21,
-  Description: "rat",
-  Salary: 3000,
-});
+// let user1 = new Models.User({
+//   Name: "Tran Anh Tien",
+//   Age: 21,
+//   Description: "Love playing basketball",
+//   Salary: 3000,
+// });
+// let user2 = new Models.User({
+//   Name: "Tran Thanh Binh",
+//   Age: 21,
+//   Description: "Love playing Football",
+//   Salary: 3000,
+// });
+// let user3 = new Models.User({
+//   Name: "Tran Phuc Nam",
+//   Age: 21,
+//   Description: "Have a hobby about playing Gundam models",
+//   Salary: 3000,
+// });
+// let user4 = new Models.User({
+//   Name: "Le Cong Khanh",
+//   Age: 21,
+//   Description: "rat",
+//   Salary: 3000,
+// });
 
-let user5 = new Models.User({
-  Name: "Le Cong Khanh",
-  Age: 21,
-  Description: "rat",
-  Salary: 3000,
-});
-let node1 = new DataStructure.Node(user1);
-let node2 = new DataStructure.Node(user2);
-let node3 = new DataStructure.Node(user3);
-let node4 = new DataStructure.Node(user4);
-let node5 = new DataStructure.Node(user5);
+// let user5 = new Models.User({
+//   Name: "Le Cong Khanh",
+//   Age: 21,
+//   Description: "rat",
+//   Salary: 3000,
+// });
+// let node1 = new DataStructure.Node(user1);
+// let node2 = new DataStructure.Node(user2);
+// let node3 = new DataStructure.Node(user3);
+// let node4 = new DataStructure.Node(user4);
+// let node5 = new DataStructure.Node(user5);
 
-let linkedList = new DataStructure.Linked_List<Models.User>();
-linkedList.insertInBegin(user1);
-linkedList.insertAtEnd(user2);
-linkedList.insertAtEnd(user3);
-linkedList.insertAtEnd(user4);
-linkedList.insertAtEnd(user5);
+// let linkedList = new DataStructure.Linked_List<Models.User>();
+// linkedList.insertInBegin(user1);
+// linkedList.insertAtEnd(user2);
+// linkedList.insertAtEnd(user3);
+// linkedList.insertAtEnd(user4);
+// linkedList.insertAtEnd(user5);
 
-let response = new Linked_List.Easy_Problems.Remove_Duplicate(linkedList);
-response.remove_duplicate();
+// let response = new Linked_List.Easy_Problems.Remove_Duplicate(linkedList);
+// response.remove_duplicate();
+
+//Leetcode - medium test =>
+let response: LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill =
+  new LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill([
+    3, 2, 5, 1, 10, 4,
+  ]);
+console.log(response.Caculate_Chemistry());
