@@ -1,0 +1,15 @@
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\bin\Debug\net8.0\Hacker_Ranks.exe
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\bin\Debug\net8.0\Hacker_Ranks.deps.json
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\bin\Debug\net8.0\Hacker_Ranks.runtimeconfig.json
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\bin\Debug\net8.0\Hacker_Ranks.dll
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\bin\Debug\net8.0\Hacker_Ranks.pdb
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.sourcelink.json
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.dll
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\refint\Hacker_Ranks.dll
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.pdb
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\Hacker_Ranks.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Coding challange\Aglorithm\Hacker_Ranks\Hacker_Ranks\obj\Debug\net8.0\ref\Hacker_Ranks.dll
