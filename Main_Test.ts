@@ -83,8 +83,10 @@ import { Models } from "./Models/User";
 // response.remove_duplicate();
 
 //Leetcode - medium test =>
-let response: LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill =
-  new LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill([
-    3, 2, 5, 1, 10, 4,
-  ]);
-console.log(response.Caculate_Chemistry());
+// let response: LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill =
+//   new LeetCode.Medium.Divide_Players_Into_Teams_Of_Equal_Skill([
+//     3, 2, 5, 1, 10, 4,
+//   ]);
+// console.log(response.Caculate_Chemistry());
+let response : LeetCode.Medium.No_1497_Improve_BigO = new LeetCode.Medium.No_1497_Improve_BigO([1,2,3,4,5,10,6,7,8,9], 5);
+console.log(response.CanArrange());
