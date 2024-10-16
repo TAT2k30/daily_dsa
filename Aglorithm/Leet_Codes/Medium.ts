@@ -98,5 +98,23 @@ export namespace LeetCode {
         return true;
       }
     }
+
+    export class No_2938 {
+      public s: string;
+      constructor(s: string) {
+        this.s = s;
+      }
+      //1 represent white , 0 represent black
+      public minimumSteps() {
+        let count: number = 0;
+        let out: number = 0;
+        for (let i = this.s.length - 1; i >= 0; i--) {
+          if (this.s[i] == "0") count++;
+          else out += count;
+          console.log("Swap no " + i + "With count = " + count + "and out + " + out);
+        }
+        return out;
+      }
+    }
   }
 }

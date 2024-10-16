@@ -88,5 +88,8 @@ import { Models } from "./Models/User";
 //     3, 2, 5, 1, 10, 4,
 //   ]);
 // console.log(response.Caculate_Chemistry());
-let response : LeetCode.Medium.No_1497_Improve_BigO = new LeetCode.Medium.No_1497_Improve_BigO([1,2,3,4,5,10,6,7,8,9], 5);
-console.log(response.CanArrange());
+// let response : LeetCode.Medium.No_1497_Improve_BigO = new LeetCode.Medium.No_1497_Improve_BigO([1,2,3,4,5,10,6,7,8,9], 5);
+// console.log(response.CanArrange());
+
+let response : LeetCode.Medium.No_2938 = new LeetCode.Medium.No_2938("1110000111");
+console.log(response.minimumSteps());
