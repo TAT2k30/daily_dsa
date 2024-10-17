@@ -98,7 +98,6 @@ export namespace LeetCode {
         return true;
       }
     }
-
     export class No_2938 {
       public s: string;
       constructor(s: string) {
@@ -111,9 +110,46 @@ export namespace LeetCode {
         for (let i = this.s.length - 1; i >= 0; i--) {
           if (this.s[i] == "0") count++;
           else out += count;
-          console.log("Swap no " + i + "With count = " + count + "and out + " + out);
+          console.log(
+            "Swap no " + i + "With count = " + count + "and out + " + out
+          );
         }
         return out;
+      }
+    }
+    export class No_1405 {
+      // a: number;
+      // b: number;
+      // c: number;
+      // constructor(a: number, b: number, c: number) {
+      //   a = a;
+      //   b = b;
+      //   c = c;
+      // }
+      // public longestDiverseString(): string {
+      //   if(this.a + this.b + this.c <= 0){
+      //     return "";
+      //   }
+      // }
+    }
+
+    export class No_670 {
+      num: number;
+      constructor(num: number) {
+        this.num = num;
+      }
+      public maximumSwap(): number {
+        let numArr = `${this.num}`.split("");
+        for (let i = 0; i < numArr.length; i++) {
+          for (let j = i + 1; j < numArr.length; j++) {
+            if (Number.parseInt(numArr[i]) < Number.parseInt(numArr[j])) {
+              let temp = numArr[j];
+              numArr[j] = numArr[i];
+              numArr[i] = temp;
+            }
+          }
+        }
+        return Number.parseInt(numArr.join(""));
       }
     }
   }
