@@ -94,5 +94,8 @@ import { Models } from "./Models/User";
 // let response : LeetCode.Medium.No_2938 = new LeetCode.Medium.No_2938("1110000111");
 // console.log(response.minimumSteps());
 
-let response: LeetCode.Medium.No_670 = new LeetCode.Medium.No_670(2829);
-console.log(response.maximumSwap());
+// let response: LeetCode.Medium.No_670 = new LeetCode.Medium.No_670(2736);
+// console.log(response.maximumSwap());
+
+let response: LeetCode.Medium.No_7_Reverse_Integer = new LeetCode.Medium.No_7_Reverse_Integer(10000002);
+console.log(response.reverse_good_one());

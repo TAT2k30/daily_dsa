@@ -152,5 +152,79 @@ export namespace LeetCode {
         return Number.parseInt(numArr.join(""));
       }
     }
+
+    export class No_670_Right_Answear {
+      num: number;
+      constructor(num: number) {
+        this.num = num;
+      }
+      public maximumSwap(): number {
+        let numArr = `${this.num}`.split("");
+        for (let i = 0; i < numArr.length; i++) {
+          for (let j = i + 1; j < numArr.length; j++) {
+            if (Number.parseInt(numArr[i]) < Number.parseInt(numArr[j])) {
+              let temp = numArr[j];
+              numArr[j] = numArr[i];
+              numArr[i] = temp;
+            }
+          }
+        }
+        return Number.parseInt(numArr.join(""));
+      }
+    }
+
+    export class No_7_Reverse_Integer {
+      public x: number;
+      constructor(input: number) {
+        this.x = input;
+      }
+
+      public reverse = (): number => {
+        let result = "";
+        let a: string;
+        if (this.x == 0 || this.x - 0 == 0) {
+          return 0;
+        }
+        if (this.x < 0) {
+          result += "-";
+          a = (this.x * -1).toString();
+        } else {
+          a = this.x.toString();
+        }
+        for (let i = a.length - 1; i >= 0; i--) {
+          let count: number = i;
+          let countResult: string = "";
+          if (a[i] == "0") {
+            while (a[count] == "0") {
+              countResult += "0";
+              count++;  
+            }
+            console.log(countResult);
+            result += countResult;
+            
+            i = i - (count- 1 - i );
+          } else {
+            result += a[i];
+          }
+        }
+        return Number.parseInt(result);
+      };
+
+      public reverse_good_one= (): number => {
+        let isNegative = this.x < 0;
+        let num = isNegative ? -this.x : this.x;
+        let reversed = 0;
+    
+        while (num > 0) {
+          const lastDigit = num % 10;
+          reversed = reversed * 10 + lastDigit;
+          num = Math.floor(num / 10); 
+        }
+    
+        if (reversed > 0x7FFFFFFF) return 0;
+    
+        return isNegative ? -reversed : reversed;
+      };
+    }
   }
 }

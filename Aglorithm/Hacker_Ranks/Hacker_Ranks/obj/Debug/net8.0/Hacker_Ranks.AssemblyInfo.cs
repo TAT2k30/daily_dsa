@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hacker_Ranks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1226e47562a93bac77a935868be865f34d17c19")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e81652c375017864668dfde946952d74386ef785")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hacker_Ranks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hacker_Ranks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
