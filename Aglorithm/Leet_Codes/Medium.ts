@@ -211,6 +211,7 @@ export namespace LeetCode {
       };
 
       public reverse_good_one= (): number => {
+        
         let isNegative = this.x < 0;
         let num = isNegative ? -this.x : this.x;
         let reversed = 0;

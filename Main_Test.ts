@@ -3,6 +3,7 @@ import { Easy_Problems } from "./Aglorithm/Arrays and String/Easy/Easy_Problems"
 import { Medium_Problems } from "./Aglorithm/Arrays and String/Medium/Medium_Problems";
 import { Hash_And_HashSet } from "./Aglorithm/Hash and HashSet/Easy/Easy_Problems";
 import { LeetCode } from "./Aglorithm/Leet_Codes/Medium";
+import { LeetCode2 } from "./Aglorithm/Leet_Codes/Easy";
 import { Linked_List } from "./Aglorithm/Linked List/Easy/Easy_Problems";
 import { DataStructure } from "./Data Structure/LinkedList";
 import { Models } from "./Models/User";
@@ -97,5 +98,8 @@ import { Models } from "./Models/User";
 // let response: LeetCode.Medium.No_670 = new LeetCode.Medium.No_670(2736);
 // console.log(response.maximumSwap());
 
-let response: LeetCode.Medium.No_7_Reverse_Integer = new LeetCode.Medium.No_7_Reverse_Integer(10000002);
-console.log(response.reverse_good_one());
+// let response: LeetCode.Medium.No_7_Reverse_Integer = new LeetCode.Medium.No_7_Reverse_Integer(10000002);
+// console.log(response.reverse_good_one());
+
+let response : LeetCode2.Easy.No_88 = new LeetCode2.Easy.No_88([1,2,3,0,0,0], 3, [2,5,6], 3);
+response.merge();
