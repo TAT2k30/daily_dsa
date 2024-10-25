@@ -43,5 +43,25 @@ export namespace LeetCode2 {
         return counter;
       }
     }
+
+    export class No_28 {
+      public strStr(haystack: string, needle: string): number {
+        if (needle.length == 0) {
+          return 0;
+        }
+
+        const needleLength = needle.length;
+        const haystackLength = haystack.length;
+        if (needleLength == haystackLength && haystack.substring(0) == needle) {
+          return 0;
+        }
+        for (let i = 0; i < haystackLength - needleLength; i++) {
+          if (haystack.substring(i, i + needleLength) == needle) {
+            return i;
+          }
+        }
+        return -1;
+      }
+    }
   }
 }
