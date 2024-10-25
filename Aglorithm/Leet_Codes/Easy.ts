@@ -24,11 +24,23 @@ export namespace LeetCode2 {
         console.log(result.sort());
       };
 
-      public merge_update = ():void => {
+      public merge_update = (): void => {
         let i = this.m - 1;
         let j = this.n - 1;
         let k = this.m + this.n - 1;
-        
+      };
+    }
+
+    export class No_27 {
+      public removeElement(nums: number[], val: number): number {
+        let counter = 0;
+        nums.forEach((ele, index) => {
+          if (ele !== val) {
+            nums[counter] = ele;
+            counter++;
+          }
+        });
+        return counter;
       }
     }
   }
