@@ -197,12 +197,12 @@ export namespace LeetCode {
           if (a[i] == "0") {
             while (a[count] == "0") {
               countResult += "0";
-              count++;  
+              count++;
             }
             console.log(countResult);
             result += countResult;
-            
-            i = i - (count- 1 - i );
+
+            i = i - (count - 1 - i);
           } else {
             result += a[i];
           }
@@ -210,21 +210,49 @@ export namespace LeetCode {
         return Number.parseInt(result);
       };
 
-      public reverse_good_one= (): number => {
-        
+      public reverse_good_one = (): number => {
         let isNegative = this.x < 0;
         let num = isNegative ? -this.x : this.x;
         let reversed = 0;
-    
+
         while (num > 0) {
           const lastDigit = num % 10;
           reversed = reversed * 10 + lastDigit;
-          num = Math.floor(num / 10); 
+          num = Math.floor(num / 10);
         }
-    
-        if (reversed > 0x7FFFFFFF) return 0;
-    
+
+        if (reversed > 0x7fffffff) return 0;
+
         return isNegative ? -reversed : reversed;
+      };
+    }
+
+    export class LRUCache {
+      capacity: number;
+      map: Map<number, number>;
+      constructor(capacity: number) {
+        this.capacity = capacity;
+        this.map = new Map();
+      }
+
+      get = (key: number): number => {
+        const value = this.map.get(key);
+
+        if (value === undefined) return -1;
+
+        // // Small hack to re-order keys: we remove the requested key and place it at the end
+        this.map.delete(key);
+        this.map.set(key, value);
+
+        return value;
+      };
+      put = (key: number, value: number): void => {
+        if (this.map.size >= this.capacity && !this.map.has(key)) {
+          const firstKey = this.map.keys().next().value;
+          this.map.delete(firstKey);
+        }
+        this.map.delete(key);
+        this.map.set(key, value);
       };
     }
   }

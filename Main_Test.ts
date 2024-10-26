@@ -101,5 +101,8 @@ import { Models } from "./Models/User";
 // let response: LeetCode.Medium.No_7_Reverse_Integer = new LeetCode.Medium.No_7_Reverse_Integer(10000002);
 // console.log(response.reverse_good_one());
 
-let response : LeetCode2.Easy.No_88 = new LeetCode2.Easy.No_88([1,2,3,0,0,0], 3, [2,5,6], 3);
-response.merge();
+// let response : LeetCode2.Easy.No_88 = new LeetCode2.Easy.No_88([1,2,3,0,0,0], 3, [2,5,6], 3);
+// response.merge();
+
+let response = new LeetCode.Medium.LRUCache(4);
+console.log(response.get(3));
