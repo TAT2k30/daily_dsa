@@ -104,5 +104,11 @@ import { Models } from "./Models/User";
 // let response : LeetCode2.Easy.No_88 = new LeetCode2.Easy.No_88([1,2,3,0,0,0], 3, [2,5,6], 3);
 // response.merge();
 
-let response = new LeetCode.Medium.LRUCache(4);
-console.log(response.get(3));
+// let response = new LeetCode.Medium.LRUCache(4);
+// console.log(response.get(3));
+
+// let response = new LeetCode.Medium.No_3("asjkdhakjdsssdkjsdiuxijc");
+// response.lengthOfLongestSubString();
+
+let response = new LeetCode.Medium.No_151
+console.log(response.reverseWords("  hello world  "));

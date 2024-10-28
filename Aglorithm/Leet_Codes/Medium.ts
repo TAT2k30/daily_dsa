@@ -255,5 +255,43 @@ export namespace LeetCode {
         this.map.set(key, value);
       };
     }
+
+    export class No_3 {
+      s: string;
+      constructor(input: string) {
+        this.s = input;
+      }
+
+      public lengthOfLongestSubString = (): number => {
+        const scanner: string[] = [];
+        let longest: number = 0;
+        for (const char of this.s) {
+          const possipleIndex = scanner.indexOf(char);
+          if (possipleIndex !== -1) {
+            scanner.splice(0, possipleIndex + 1);
+          }
+          scanner.push(char);
+          console.log(scanner);
+          longest = Math.max(longest, scanner.length);
+        }
+
+        return longest;
+      };
+    }
+
+    export class No_151 {
+      public reverseWords = (s: string): string => {
+        let parts = s.split(" ");
+        let result: string = "";
+        for(let i = parts.length - 1 ; i >= 0; i--){
+         let words = parts[i];
+         if(words){
+          result += words + " ";
+         }
+        }
+
+        return result.trim();
+      };
+    }
   }
 }

@@ -63,5 +63,7 @@ export namespace LeetCode2 {
         return -1;
       }
     }
+
+    
   }
 }
