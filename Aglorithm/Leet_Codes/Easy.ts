@@ -64,6 +64,21 @@ export namespace LeetCode2 {
       }
     }
 
-    
+    export class No_14 {
+      public longestCommonPrefix = (str: string[]): string => {
+        if(str.length == 0) return '';
+        let prefix: string = "";
+        for (let i = 0; i < str.length - 1; i++) {
+          while(str[i].indexOf(prefix) !== 0){
+            prefix = prefix.substring(0, prefix.length - 1);
+            if(prefix === ''){
+              return '';
+            }
+          }
+          
+        }
+        return prefix;
+      };
+    }
   }
 }
