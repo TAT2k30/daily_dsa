@@ -66,18 +66,37 @@ export namespace LeetCode2 {
 
     export class No_14 {
       public longestCommonPrefix = (str: string[]): string => {
-        if(str.length == 0) return '';
+        if (str.length == 0) return "";
         let prefix: string = "";
         for (let i = 0; i < str.length - 1; i++) {
-          while(str[i].indexOf(prefix) !== 0){
+          while (str[i].indexOf(prefix) !== 0) {
             prefix = prefix.substring(0, prefix.length - 1);
-            if(prefix === ''){
-              return '';
+            if (prefix === "") {
+              return "";
             }
           }
-          
         }
         return prefix;
+      };
+    }
+
+    export class No_217 {
+      // Time complex 0(n^2) => Bad asf
+      public containDublicate = (numbers: number[]): boolean => {
+        for (let i = 0; i < numbers.length; i++) {
+          for (let j = i + 1; j < numbers.length; j++) {
+            if (numbers[i] == numbers[j]) {
+              return true;
+            }
+          }
+        }
+        return false;
+      };
+
+      //Time complex O(n) ==> Better
+      public containDublicate_advace = (numbers: number[]): boolean => {
+        const set = new Set<number>(numbers);
+        return set.size < numbers.length;
       };
     }
   }
