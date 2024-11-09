@@ -99,5 +99,40 @@ export namespace LeetCode2 {
         return set.size < numbers.length;
       };
     }
+
+    export class No_268 {
+      //Time complex O(n) => good 
+      public missingArrayOfNumber = (numbers: number[]): number[][] => {
+        let result: number[][] = [];
+        numbers.sort((a, b) => a - b);
+
+        if (numbers[0] !== 0) {
+          throw new Error("The first element in the input must be 0.");
+        }
+
+        for (let i = 0; i < numbers.length; i++) {
+          // Kiểm tả nếu số tiếp theo không liền kề.
+          if (numbers[i + 1] !== numbers[i] + 1) {
+            let missingRange: number[] = [];
+            for (
+              let num: number = numbers[i] + 1;
+              num < numbers[i + 1];
+              num++
+            ) {
+              missingRange.push(num);
+            }
+            if (missingRange.length > 0) {
+              result.push(missingRange);
+            }
+          }
+        }
+
+        return result;
+      };
+
+      // public missingNumber = (nums: number[]): number => {
+
+      // }
+    }
   }
 }
