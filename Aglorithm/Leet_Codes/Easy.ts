@@ -154,5 +154,25 @@ export namespace LeetCode2 {
         return result;
       };
     }
+
+    export class No_136 {
+      public singleNumber = (nums: number[]): number => {
+        const map = new Map<number, number>();
+        nums.forEach((num) => {
+          if (map.has(num)) {
+            map.set(num, map.get(num)! + 1);
+          } else {
+            map.set(num, 1);
+          }
+        });
+
+        for (const [key, value] of map.entries()) {
+          if (value === 1) {
+            return key;
+          }
+        }
+        throw new Error("No unique element found");
+      };
+    }
   }
 }
