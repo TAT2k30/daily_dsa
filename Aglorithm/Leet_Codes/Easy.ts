@@ -101,16 +101,16 @@ export namespace LeetCode2 {
     }
 
     export class No_268 {
-      //Time complex O(n) => good 
+      //Time complex O(n) => good
       public missingArrayOfNumber = (numbers: number[]): number[][] => {
         let result: number[][] = [];
         numbers.sort((a, b) => a - b);
 
-        if (numbers[0] !== 0) {
-          throw new Error("The first element in the input must be 0.");
+        if (numbers[0] !== 1) {
+          throw new Error("The first element in the input must be 1.");
         }
 
-        for (let i = 0; i < numbers.length; i++) {
+        for (let i = 1; i < numbers.length; i++) {
           // Kiểm tả nếu số tiếp theo không liền kề.
           if (numbers[i + 1] !== numbers[i] + 1) {
             let missingRange: number[] = [];
@@ -133,6 +133,26 @@ export namespace LeetCode2 {
       // public missingNumber = (nums: number[]): number => {
 
       // }
+    }
+
+    export class No_448 {
+      public findDisappearNumbers = (nums: number[]): number[] => {
+        const n: number = nums.length;
+        for (let i = 0; i < n; i++) {
+          const index = Math.abs(nums[i]) - 1;
+          if (nums[index] > 0) {
+            nums[index] = -nums[index];
+          }
+        }
+
+        const result: number[] = [];
+        for (let i = 0; i < n; i++) {
+          if (nums[i] > 0) {
+            result.push(i);
+          }
+        }
+        return result;
+      };
     }
   }
 }
