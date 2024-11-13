@@ -174,5 +174,65 @@ export namespace LeetCode2 {
         throw new Error("No unique element found");
       };
     }
+
+    export class No_70 {
+      //Without memoization
+      public claimStair = (n: number): number => {
+        return this.climbStairs(n);
+      };
+
+      public climbStairs = (n: number, memo: number[] = []): number => {
+        if (n < 0) return 0;
+        if (n === 0) return 1;
+        if (n === 1) return 1;
+
+        if (memo[n] !== undefined) {
+          return memo[n];
+        }
+
+        memo[n] = this.climbStairs(n - 1, memo) + this.climbStairs(n - 2, memo);
+        return memo[n];
+      };
+    }
+
+    export class No_121 {
+      //Dynamic program approach
+      public maxProfit = (prices: number[]): number => {
+        let minPrice = Number.MAX_VALUE;
+        let maxProfit = 0;
+
+        for (const price of prices) {
+          minPrice = Math.min(price, minPrice);
+          maxProfit = Math.max(maxProfit, price - minPrice);
+        }
+
+        return maxProfit;
+      };
+
+      //Two pointer approach
+      public maxProfit_2 = (prices: number[]): number => {
+        if (!prices || prices.length < 2) {
+          return 0;
+        }
+
+        let maxProfit: number = 0;
+        let firstPointer: number = 0;
+        let secondPointer: number = 1;
+
+        while (secondPointer < prices.length) {
+          let byPrice = prices[firstPointer];
+          let sellPrice = prices[secondPointer];
+          if (byPrice < sellPrice) {
+            const currentProfit = sellPrice - byPrice;
+            maxProfit = Math.max(maxProfit, currentProfit);
+          } else {
+            firstPointer = secondPointer;
+          }
+          secondPointer++;
+        }
+
+        return maxProfit;
+      };
+    }
   }
 }

@@ -8,3 +8,10 @@ import { LeetCode2 } from "./Easy";
 
 // let response : LeetCode2.Easy.No_448 = new LeetCode2.Easy.No_448;
 // console.log(response.findDisappearNumbers([4,3,2,7,8,2,3,1]));
+
+
+// let response : LeetCode2.Easy.No_70 = new LeetCode2.Easy.No_70
+// console.log(response.claimStair(6));
+
+let response: LeetCode2.Easy.No_121 = new LeetCode2.Easy.No_121
+console.log(response.maxProfit_2([7,1,5,3,6,4]))
