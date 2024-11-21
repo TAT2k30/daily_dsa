@@ -234,5 +234,48 @@ export namespace LeetCode2 {
         return maxProfit;
       };
     }
+
+    export class NumArray {
+      nums: number[] = [];
+      constructor(nums: number[]) {
+        nums.forEach((num) => {
+          this.nums.push(num);
+        });
+      }
+
+      sumArrange = (left: number, right: number): number => {
+        let result: number = 0;
+        if (left > right) {
+          throw new Error("Left number cannot be reater than right number");
+        }
+
+        while ((left = right)) {
+          result += this.nums[left];
+          left++;
+        }
+
+        return result;
+      };
+    }
+
+    export class No_338 {
+      countBits(n: number): number[] {
+        let result: number[] = Array(n).fill(0);
+        for (let i = 0; i <= n; i++) {
+          result[i] = i.toString(2).split("1").length - 1;
+        }
+
+        return result;
+      }
+    }
+
+    export class ListNode {
+      val: number;
+      next: ListNode | null;
+      constructor(val?: number, next?: ListNode | null) {
+        this.val = val === undefined ? 0 : val;
+        this.next = next === undefined ? null : next;
+      }
+    }
   }
 }
