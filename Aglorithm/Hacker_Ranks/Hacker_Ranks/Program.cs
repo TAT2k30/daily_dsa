@@ -4,7 +4,7 @@ class MainTest
 {
     public static void Main(string[] args)
     {
-       int response = CountingValley.coutingValley(8, "UUUDDUDU");
-       Console.WriteLine("Total valley: "+ response);
+        int response = ElectronicShop.getMoneySpent_Bubble_Search([1, 15, 20], [9, 4, 20], 39);
+        System.Console.WriteLine(response);
     }
 }
