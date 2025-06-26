@@ -1,3 +1,6 @@
+import { DataStructure } from "../../Data Structure/LinkedList";
+import { Models } from "../../Models/ModleClass";
+
 export namespace LeetCode {
   export namespace Medium {
     export class Divide_Players_Into_Teams_Of_Equal_Skill {
@@ -283,14 +286,54 @@ export namespace LeetCode {
       public reverseWords = (s: string): string => {
         let parts = s.split(" ");
         let result: string = "";
-        for(let i = parts.length - 1 ; i >= 0; i--){
-         let words = parts[i];
-         if(words){
-          result += words + " ";
-         }
+        for (let i = parts.length - 1; i >= 0; i--) {
+          let words = parts[i];
+          if (words) {
+            result += words + " ";
+          }
         }
 
         return result.trim();
+      };
+    }
+
+    export class No_2 {
+      public addTwoNumber = (
+        linkedList1: DataStructure.Linked_List<Models.Number>,
+        linkedList2: DataStructure.Linked_List<Models.Number>
+      ): DataStructure.Linked_List<Models.Number> | null => {
+        // Bước 1: Đảo ngược cả hai linked list
+        linkedList1.reverseLinkedList();
+        linkedList2.reverseLinkedList();
+
+        const resultList = new DataStructure.Linked_List<Models.Number>();
+
+        let node1 = linkedList1.getHead();
+        let node2 = linkedList2.getHead();
+        let carry = 0;
+
+        // Bước 2: Loop qua cả 2 linked list
+        while (node1 || node2 || carry > 0) {
+          const val1 = node1 ? node1.data.getValue() : 0;
+          const val2 = node2 ? node2.data.getValue() : 0;
+
+          const sum = val1 + val2 + carry;
+          carry = Math.floor(sum / 10);
+          const digit = sum % 10;
+
+          // Tạo Models.Number mới
+          const newNode = new Models.Number({
+            Name: "Sum",
+            Number: digit,
+          });
+
+          resultList.insertAtEnd(newNode);
+
+          node1 = node1?.next || null;
+          node2 = node2?.next || null;
+        }
+
+        return resultList;
       };
     }
   }

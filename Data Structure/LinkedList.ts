@@ -5,8 +5,11 @@ export namespace DataStructure {
     deleteNode(node: Node<T>): void;
     printLinkedList(): void;
     traverse(): T[];
-    size(): number;
+    getSize(): number;
     serach(comparator: (data: T) => boolean): Node<T> | null;
+    reverseLinkedList(): Node<T> | null;
+    getHead(): Node<T> | null;
+    getTail(): Node<T> | null;
   }
   export interface HasName {
     Name: string;
@@ -24,24 +27,38 @@ export namespace DataStructure {
 
   export class Linked_List<T extends HasName> implements ILinkedList<T> {
     private head: Node<T> | null = null;
+    private tail: Node<T> | null = null;
+    private size: number = 0;
 
     public insertInBegin(data: T): Node<T> {
       const node = new Node(data);
       if (!this.head) {
         this.head = node;
+        this.tail = node;
       } else {
         this.head.prev = node;
         node.next = this.head;
         this.head = node;
+        this.tail = node.next;
       }
+      this.size = 1;
       return node;
     }
 
-    insertAtEnd(data: T): Node<T> {
+    public getTail(): Node<T> | null {
+      return this.tail;
+    }
+
+    public getHead(): Node<T> | null {
+      return this.head;
+    }
+
+    public insertAtEnd(data: T): Node<T> {
       const node = new Node(data);
       //Nếu danh sách rỗng thì add vào vị trí head
       if (this.head == null) {
         this.head = node;
+        this.size = 1;
         return node;
       }
       let currNode = this.head;
@@ -50,6 +67,7 @@ export namespace DataStructure {
       }
       currNode.next = node;
       node.prev = currNode;
+      this.size += 1;
       return node;
     }
     deleteNode(node: Node<T>): void {
@@ -58,8 +76,8 @@ export namespace DataStructure {
     traverse(): T[] {
       throw new Error("Method not implemented.");
     }
-    size(): number {
-      throw new Error("Method not implemented.");
+    public getSize(): number {
+      return this.size;
     }
     serach(comparator: (data: T) => boolean): Node<T> | null {
       throw new Error("Method not implemented.");
@@ -68,15 +86,33 @@ export namespace DataStructure {
       let result: string = "";
       let currentNode = this.head;
       while (currentNode) {
-        result += `${currentNode.data.Name} -> `;
+        result += `${currentNode.data} -> `;
         currentNode = currentNode.next;
       }
       result += "null";
       console.log(result);
     }
 
-    public getHead = (): Node<T> => {
-      return this.head!;
-    };
+    public reverseLinkedList(): Node<T> | null {
+      if ((this.size = 0)) {
+        return null;
+      }
+
+      let current: Node<T> | null = this.head;
+      let prev: Node<T> | null = null;
+
+      while (current) {
+        const next = current.next;
+        current.prev = next;
+        current.next = prev;
+
+        prev = current;
+        current = next;
+      }
+
+      this.head = prev;
+
+      return this.head;
+    }
   }
 }

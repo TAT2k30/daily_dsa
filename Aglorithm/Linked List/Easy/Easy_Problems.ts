@@ -1,5 +1,5 @@
 import { DataStructure } from "../../../Data Structure/LinkedList";
-import { Models } from "../../../Models/User";
+import { Models } from "../../../Models/ModleClass";
 
 export namespace Linked_List {
   export namespace Easy_Problems {

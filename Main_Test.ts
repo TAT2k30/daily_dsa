@@ -6,7 +6,7 @@ import { LeetCode } from "./Aglorithm/Leet_Codes/Medium";
 import { LeetCode2 } from "./Aglorithm/Leet_Codes/Easy";
 import { Linked_List } from "./Aglorithm/Linked List/Easy/Easy_Problems";
 import { DataStructure } from "./Data Structure/LinkedList";
-import { Models } from "./Models/User";
+import { Models } from "./Models/ModleClass";
 // let response:Easy_Problems.B7.Summary_Ranges = new Easy_Problems.B7.Summary_Ranges([1,3,2,10,9,11,2,1])
 // console.log(response.summary_ranges());
 
@@ -110,5 +110,71 @@ import { Models } from "./Models/User";
 // let response = new LeetCode.Medium.No_3("asjkdhakjdsssdkjsdiuxijc");
 // response.lengthOfLongestSubString();
 
-let response = new LeetCode.Medium.No_151
-console.log(response.reverseWords("  hello world  "));
+// let response = new LeetCode.Medium.No_151
+// console.log(response.reverseWords("  hello world  "));
+
+
+// let user1 = new Models.User({
+//   Name: "Tran Anh Tien",
+//   Age: 21,
+//   Description: "Love playing basketball",
+//   Salary: 3000,
+// });
+// let user2 = new Models.User({
+//   Name: "Tran Thanh Binh",
+//   Age: 21,
+//   Description: "Love playing Football",
+//   Salary: 3000,
+// });
+// let user3 = new Models.User({
+//   Name: "Tran Phuc Nam",
+//   Age: 21,
+//   Description: "Have a hobby about playing Gundam models",
+//   Salary: 3000,
+// });
+// let user4 = new Models.User({
+//   Name: "Le Cong Khanh",
+//   Age: 21,
+//   Description: "rat",
+//   Salary: 3000,
+// });
+// let user5 = new Models.User({
+//   Name: "Le Cong Khanh",
+//   Age: 21,
+//   Description: "rat",
+//   Salary: 3000,
+// });
+// let node1 = new DataStructure.Node(user1);
+// let node2 = new DataStructure.Node(user2);
+// let node3 = new DataStructure.Node(user3);
+// let node4 = new DataStructure.Node(user4);
+// let node5 = new DataStructure.Node(user5);
+
+// let linkedList = new DataStructure.Linked_List<Models.User>();
+// linkedList.insertInBegin(user1);
+// linkedList.insertAtEnd(user2);
+// linkedList.insertAtEnd(user3);
+// linkedList.insertAtEnd(user4);
+// linkedList.insertAtEnd(user5);
+
+// linkedList.printLinkedList();
+// linkedList.reverseLinkedList();
+// linkedList.printLinkedList();
+const number1_1 = new Models.Number({ Name: "Num1", Number: 1 });
+const number1_2 = new Models.Number({ Name: "Num2", Number: 2 });
+const number1_3 = new Models.Number({ Name: "Num3", Number: 3 });
+const number1_4 = new Models.Number({ Name: "Num4", Number: 4 });
+const number1_5 = new Models.Number({ Name: "Num5", Number: 5 });
+const list1 = new DataStructure.Linked_List<Models.Number>();
+[number1_1, number1_2, number1_3, number1_4, number1_5].forEach((n) => list1.insertAtEnd(n));
+
+const number2_1 = new Models.Number({ Name: "Num1", Number: 1 });
+const number2_2 = new Models.Number({ Name: "Num2", Number: 2 });
+const number2_3 = new Models.Number({ Name: "Num3", Number: 3 });
+const number2_4 = new Models.Number({ Name: "Num4", Number: 4 });
+const number2_5 = new Models.Number({ Name: "Num5", Number: 5 });
+const list2 = new DataStructure.Linked_List<Models.Number>();
+[number2_1, number2_2, number2_3, number2_4, number2_5].forEach((n) => list2.insertAtEnd(n));
+
+let linked_list_result = new LeetCode.Medium.No_2().addTwoNumber(list1, list2);
+linked_list_result?.printLinkedList();
