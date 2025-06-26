@@ -114,67 +114,60 @@ import { Models } from "./Models/ModleClass";
 // console.log(response.reverseWords("  hello world  "));
 
 
-// let user1 = new Models.User({
-//   Name: "Tran Anh Tien",
-//   Age: 21,
-//   Description: "Love playing basketball",
-//   Salary: 3000,
-// });
-// let user2 = new Models.User({
-//   Name: "Tran Thanh Binh",
-//   Age: 21,
-//   Description: "Love playing Football",
-//   Salary: 3000,
-// });
-// let user3 = new Models.User({
-//   Name: "Tran Phuc Nam",
-//   Age: 21,
-//   Description: "Have a hobby about playing Gundam models",
-//   Salary: 3000,
-// });
-// let user4 = new Models.User({
-//   Name: "Le Cong Khanh",
-//   Age: 21,
-//   Description: "rat",
-//   Salary: 3000,
-// });
-// let user5 = new Models.User({
-//   Name: "Le Cong Khanh",
-//   Age: 21,
-//   Description: "rat",
-//   Salary: 3000,
-// });
-// let node1 = new DataStructure.Node(user1);
-// let node2 = new DataStructure.Node(user2);
-// let node3 = new DataStructure.Node(user3);
-// let node4 = new DataStructure.Node(user4);
-// let node5 = new DataStructure.Node(user5);
 
-// let linkedList = new DataStructure.Linked_List<Models.User>();
-// linkedList.insertInBegin(user1);
-// linkedList.insertAtEnd(user2);
-// linkedList.insertAtEnd(user3);
-// linkedList.insertAtEnd(user4);
-// linkedList.insertAtEnd(user5);
+const userData = [
+  { Name: "Tran Anh Tien", Age: 21, Description: "Love playing basketball", Salary: 3000 },
+  { Name: "Tran Thanh Binh", Age: 21, Description: "Love playing Football", Salary: 3000 },
+  { Name: "Tran Phuc Nam", Age: 21, Description: "Have a hobby about playing Gundam models", Salary: 3000 },
+  { Name: "Le Cong Khanh", Age: 21, Description: "rat", Salary: 3000 },
+  { Name: "Le Cong Khanh", Age: 21, Description: "rat", Salary: 3000 },
+];
+
+// 2. Tạo instance của Models.User
+const users = userData.map((data) => new Models.User(data));
+
+// 3. Tạo các Node tương ứng
+const [node1, node2, node3, node4, node5] = users.map((user) => new DataStructure.Node(user));
+
+// 4. Tạo linked list và insert các node
+const linkedList = new DataStructure.Linked_List<Models.User>();
+
+linkedList.insertInBegin(node1.data);
+linkedList.insertAtEnd(node2.data);
+linkedList.insertAtEnd(node3.data);
+linkedList.insertAtEnd(node4.data);
+linkedList.insertAtEnd(node5.data);
+
+// Truy cập tail node cuối cùng (node5)
+const tailNode = linkedList.getTail();
+
+// Truy cập node muốn nối tới để tạo vòng (ví dụ: node1)
+const headNode = linkedList.getHead();
+
+// Tạo vòng lặp
+if (tailNode && headNode) {
+  tailNode.next = headNode; // nối node cuối → node đầu
+  headNode.prev = tailNode; // nếu bạn đang dùng doubly linked list
+}
 
 // linkedList.printLinkedList();
 // linkedList.reverseLinkedList();
 // linkedList.printLinkedList();
-const number1_1 = new Models.Number({ Name: "Num1", Number: 1 });
-const number1_2 = new Models.Number({ Name: "Num2", Number: 2 });
-const number1_3 = new Models.Number({ Name: "Num3", Number: 3 });
-const number1_4 = new Models.Number({ Name: "Num4", Number: 4 });
-const number1_5 = new Models.Number({ Name: "Num5", Number: 5 });
-const list1 = new DataStructure.Linked_List<Models.Number>();
-[number1_1, number1_2, number1_3, number1_4, number1_5].forEach((n) => list1.insertAtEnd(n));
+// const number1_1 = new Models.Number({ Name: "Num1", Number: 1 });
+// const number1_2 = new Models.Number({ Name: "Num2", Number: 2 });
+// const number1_3 = new Models.Number({ Name: "Num3", Number: 3 });
+// const number1_4 = new Models.Number({ Name: "Num4", Number: 4 });
+// const number1_5 = new Models.Number({ Name: "Num5", Number: 5 });
+// const list1 = new DataStructure.Linked_List<Models.Number>();
+// [number1_1, number1_2, number1_3, number1_4, number1_5].forEach((n) => list1.insertAtEnd(n));
 
-const number2_1 = new Models.Number({ Name: "Num1", Number: 1 });
-const number2_2 = new Models.Number({ Name: "Num2", Number: 2 });
-const number2_3 = new Models.Number({ Name: "Num3", Number: 3 });
-const number2_4 = new Models.Number({ Name: "Num4", Number: 4 });
-const number2_5 = new Models.Number({ Name: "Num5", Number: 5 });
-const list2 = new DataStructure.Linked_List<Models.Number>();
-[number2_1, number2_2, number2_3, number2_4, number2_5].forEach((n) => list2.insertAtEnd(n));
+// const number2_1 = new Models.Number({ Name: "Num1", Number: 1 });
+// const number2_2 = new Models.Number({ Name: "Num2", Number: 2 });
+// const number2_3 = new Models.Number({ Name: "Num3", Number: 3 });
+// const number2_4 = new Models.Number({ Name: "Num4", Number: 4 });
+// const number2_5 = new Models.Number({ Name: "Num5", Number: 5 });
+// const list2 = new DataStructure.Linked_List<Models.Number>();
+// [number2_1, number2_2, number2_3, number2_4, number2_5].forEach((n) => list2.insertAtEnd(n));
 
-let linked_list_result = new LeetCode.Medium.No_2().addTwoNumber(list1, list2);
-linked_list_result?.printLinkedList();
+console.log(linkedList.isCycleLinkedList());
+console.log(linkedList.getSize())

@@ -86,7 +86,7 @@ export namespace DataStructure {
       let result: string = "";
       let currentNode = this.head;
       while (currentNode) {
-        result += `${currentNode.data} -> `;
+        result += `${currentNode.data.Name} -> `;
         currentNode = currentNode.next;
       }
       result += "null";
@@ -113,6 +113,20 @@ export namespace DataStructure {
       this.head = prev;
 
       return this.head;
+    }
+
+    public isCycleLinkedList(): boolean {
+      let slow = this.head;
+      let fast = this.head;
+
+      while (fast && fast.next) {
+        slow = slow!.next;
+        fast = fast.next.next;
+
+        if (slow === fast) return true;
+      }
+
+      return false;
     }
   }
 }
